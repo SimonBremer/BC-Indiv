@@ -1,1 +1,25 @@
+{
+  "id": "72177600-0000-4000-9000-000000000001",
+  "name": "BC-Indiv Test App",
+  "publisher": "Simon Bremer",
+  "version": "1.0.0.0",
+  "brief": "Test extension for AL-Go signing.",
+  "description": "A simple Business Central extension to verify AL-Go build and signing.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://github.com/SimonBremer/BC-Indiv",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "25.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 72177600,
+      "to": 72177699
+    }
+  ],
+  "runtime": "13.0"
+}
 
