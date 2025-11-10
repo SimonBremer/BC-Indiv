@@ -1,1 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BC-Indiv Sandbox",
+            "type": "al",
+            "request": "launch",
+            "server": "https://businesscentral.dynamics.com",
+            "tenant": "default",
+            "environmentType": "Sandbox",
+            "startupObjectType": "Page",
+            "startupObjectId": 72177600
+        }
+    ]
+}
 
