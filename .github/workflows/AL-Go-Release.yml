@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    uses: microsoft/AL-Go-Actions/.github/workflows/BuildAndSign.yml@main
+    uses: microsoft/AL-Go-Actions/BuildAndSign@main
     with:
       type: "PerTenantExtension"
       versioningStrategy: "auto"
