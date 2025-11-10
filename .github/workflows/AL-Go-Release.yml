@@ -1,0 +1,21 @@
+name: Build and Sign Business Central App
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: microsoft/AL-Go-Actions/.github/workflows/BuildAndSign.yml@v5
+    with:
+      type: "PerTenantExtension"
+      versioningStrategy: "auto"
+      useKeyVaultSign: true
+      keyVaultCertificateName: "AppSignCert"
+      keyVaultName: "uzmkeyvault"
+      publishToGitHubPackages: false
+      artifactName: "SignedApp"
+    secrets:
+      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
