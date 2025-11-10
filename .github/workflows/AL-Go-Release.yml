@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build and Sign App with AL-Go
-        uses: microsoft/AL-Go-Actions/BuildAndSign@main
+        uses: microsoft/AL-Go-Actions/.github/workflows/BuildAndSign.yml@main
         with:
           type: "PerTenantExtension"
           versioningStrategy: "auto"
