@@ -8,14 +8,20 @@ on:
 
 jobs:
   build:
-    uses: microsoft/AL-Go-Actions/BuildAndSign@main
-    with:
-      type: "PerTenantExtension"
-      versioningStrategy: "auto"
-      useKeyVaultSign: true
-      keyVaultCertificateName: "AppSignCert"
-      keyVaultName: "uzmkeyvault"
-      publishToGitHubPackages: false
-      artifactName: "SignedApp"
-    secrets:
-      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build and Sign App with AL-Go
+        uses: microsoft/AL-Go-Actions/BuildAndSign@main
+        with:
+          type: "PerTenantExtension"
+          versioningStrategy: "auto"
+          useKeyVaultSign: true
+          keyVaultCertificateName: "AppSignCert"
+          keyVaultName: "uzmkeyvault"
+          publishToGitHubPackages: false
+          artifactName: "SignedApp"
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
